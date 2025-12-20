@@ -5,23 +5,31 @@
   <title>Tutorlyra • Student Tutoring</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f4f6fa;
+      background: #f0f2f7;
       color: #333;
-      line-height: 1.6;
     }
 
     header {
-      background: #3b5cff;
+      background: linear-gradient(90deg, #3b5cff, #2f49cc);
       color: white;
-      padding: 30px 20px;
+      padding: 80px 20px;
       text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
     }
 
     nav {
       background: #2f49cc;
-      padding: 15px;
+      padding: 15px 0;
       text-align: center;
     }
 
@@ -31,6 +39,7 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
+      transition: all 0.3s;
     }
 
     nav a:hover {
@@ -38,30 +47,62 @@
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 25px;
       color: #2f49cc;
+      margin-bottom: 40px;
+      font-size: 2rem;
     }
 
-    ul {
-      list-style: disc;
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #3b5cff;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .card p, .card ul, .card ol {
+      margin: 0;
+    }
+
+    .card ul, .card ol {
+      margin-top: 10px;
       padding-left: 20px;
     }
 
     a.button {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
+      margin-top: 20px;
+      padding: 12px 25px;
       background: #3b5cff;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
     a.button:hover {
@@ -72,8 +113,19 @@
       background: #222;
       color: white;
       text-align: center;
-      padding: 25px 20px;
-      margin-top: 40px;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -81,70 +133,92 @@
 
   <header>
     <h1>Tutorlyra</h1>
-    <p>Student-run tutoring • Online • School-focused</p>
+    <p>Student-run tutoring • Online • School-focused • Peer Learning Made Easy</p>
+    <a href="tutors.html" class="button">Find a Tutor</a>
   </header>
 
   <nav>
-    <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#process">How it Works</a>
+    <a href="#process">How It Works</a>
     <a href="#rules">Rules</a>
   </nav>
 
-  <section id="home">
-    <h2>Welcome to Tutorlyra</h2>
-    <p>
-      Tutorlyra connects students with peer tutors from our school. Whether you
-      need help in Math, Science, English, or other subjects, we make learning
-      flexible, safe, and fun. All sessions are online and must be booked at least
-      <strong>24 hours in advance</strong>.
-    </p>
-    <p>
-      <a href="tutors.html" class="button">View Our Tutors</a>
-    </p>
-  </section>
-
   <section id="about">
     <h2>About Tutorlyra</h2>
-    <p>
-      Tutorlyra is run by students, for students. Our goal is to create a safe
-      and effective peer tutoring network that helps everyone succeed academically.
-      Tutors are selected based on subject expertise, reliability, and experience.
-    </p>
-    <p><strong>Why choose Tutorlyra?</strong></p>
-    <ul>
-      <li>Flexible scheduling to fit your school life</li>
-      <li>Verified student tutors from our school</li>
-      <li>Online sessions for convenience and safety</li>
-      <li>Focus on school subjects and academic support</li>
-      <li>Friendly, supportive, and patient tutors</li>
-    </ul>
+    <div class="card-container">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>
+          Tutorlyra was created by students for students. We provide a safe, online
+          platform where peers can support each other academically, making learning
+          flexible and engaging.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>Flexible scheduling to fit school life</li>
+          <li>Verified student tutors</li>
+          <li>Online sessions for convenience and safety</li>
+          <li>Focus on school subjects and academic growth</li>
+          <li>Friendly and supportive environment</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Subjects We Cover</h3>
+        <ul>
+          <li>Math: Algebra, Geometry, Trigonometry, Calculus</li>
+          <li>Science: Biology, Chemistry, Physics</li>
+          <li>English: Writing, Literature, Public Speaking</li>
+          <li>Social Studies: History, Civics</li>
+          <li>Computer Science & Coding</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="process">
     <h2>How It Works</h2>
-    <ol>
-      <li>Browse our tutors and their subjects.</li>
-      <li>Book a session at least 24 hours in advance.</li>
-      <li>Receive the Zoom or Google Meet link after booking.</li>
-      <li>Attend the session online and get personalized help.</li>
-      <li>Provide feedback to help improve the tutoring experience.</li>
-    </ol>
-    <p>
-      <a href="tutors.html" class="button">Find Your Tutor</a>
-    </p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Step 1: Browse Tutors</h3>
+        <p>Check out our tutors, their subjects, and availability.</p>
+      </div>
+      <div class="card">
+        <h3>Step 2: Book a Session</h3>
+        <p>Book at least 24 hours in advance to secure your spot.</p>
+      </div>
+      <div class="card">
+        <h3>Step 3: Attend Online</h3>
+        <p>Receive your Zoom/Google Meet link and join the session online.</p>
+      </div>
+      <div class="card">
+        <h3>Step 4: Feedback</h3>
+        <p>Give feedback to improve the tutoring experience for everyone.</p>
+      </div>
+    </div>
   </section>
 
   <section id="rules">
     <h2>Rules & Safety</h2>
-    <ul>
-      <li>All sessions are online only.</li>
-      <li>Bookings must be made at least 24 hours in advance.</li>
-      <li>No last names or personal contact info are shared publicly.</li>
-      <li>Only school-appropriate subjects are allowed.</li>
-      <li>Respect your tutor’s time and effort.</li>
-      <li>Sessions are confidential and safe.</li>
-    </ul>
+    <div class="card-container">
+      <div class="card">
+        <ul>
+          <li>All sessions are online only.</li>
+          <li>Bookings must be made 24+ hours in advance.</li>
+          <li>No last names or personal contact info shared.</li>
+          <li>Only school-appropriate subjects allowed.</li>
+          <li>Respect your tutor’s time and effort.</li>
+          <li>Sessions are confidential and safe.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p>
+          We prioritize safety and learning. Tutors are verified students from
+          our school, and all sessions follow school-appropriate standards.
+        </p>
+      </div>
+    </div>
   </section>
 
   <footer>
