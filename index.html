@@ -2,89 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Tutors • Tutorlyra</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Tutorlyra • Student Tutoring</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #3b5cff;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #2f49cc;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #2f49cc;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #3b5cff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    a.button:hover {
+      background: #2f49cc;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Tutorlyra</h1>
-  <p>Student-run tutoring • Online • School-focused</p>
-</header>
+  <header>
+    <h1>Tutorlyra</h1>
+    <p>Student-run tutoring • Online • School-focused</p>
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="tutors.html">Tutors</a>
-  <a href="index.html#rules">Rules</a>
-</nav>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#process">How it Works</a>
+    <a href="#rules">Rules</a>
+  </nav>
 
-<section>
-  <h2>Meet Our Tutors</h2>
+  <section id="home">
+    <h2>Welcome to Tutorlyra</h2>
+    <p>
+      Tutorlyra connects students with peer tutors from our school. Whether you
+      need help in Math, Science, English, or other subjects, we make learning
+      flexible, safe, and fun. All sessions are online and must be booked at least
+      <strong>24 hours in advance</strong>.
+    </p>
+    <p>
+      <a href="tutors.html" class="button">View Our Tutors</a>
+    </p>
+  </section>
 
-  <div class="tutors">
+  <section id="about">
+    <h2>About Tutorlyra</h2>
+    <p>
+      Tutorlyra is run by students, for students. Our goal is to create a safe
+      and effective peer tutoring network that helps everyone succeed academically.
+      Tutors are selected based on subject expertise, reliability, and experience.
+    </p>
+    <p><strong>Why choose Tutorlyra?</strong></p>
+    <ul>
+      <li>Flexible scheduling to fit your school life</li>
+      <li>Verified student tutors from our school</li>
+      <li>Online sessions for convenience and safety</li>
+      <li>Focus on school subjects and academic support</li>
+      <li>Friendly, supportive, and patient tutors</li>
+    </ul>
+  </section>
 
-    <div class="tutor-card">
-      <h3>Alex M.</h3>
-      <p><strong>Subjects:</strong> Algebra I, Geometry</p>
-      <p><strong>Grade:</strong> 10</p>
-      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-    </div>
+  <section id="process">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Browse our tutors and their subjects.</li>
+      <li>Book a session at least 24 hours in advance.</li>
+      <li>Receive the Zoom or Google Meet link after booking.</li>
+      <li>Attend the session online and get personalized help.</li>
+      <li>Provide feedback to help improve the tutoring experience.</li>
+    </ol>
+    <p>
+      <a href="tutors.html" class="button">Find Your Tutor</a>
+    </p>
+  </section>
 
-    <div class="tutor-card">
-      <h3>Jamie R.</h3>
-      <p><strong>Subjects:</strong> Biology, Chemistry</p>
-      <p><strong>Grade:</strong> 11</p>
-      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-    </div>
+  <section id="rules">
+    <h2>Rules & Safety</h2>
+    <ul>
+      <li>All sessions are online only.</li>
+      <li>Bookings must be made at least 24 hours in advance.</li>
+      <li>No last names or personal contact info are shared publicly.</li>
+      <li>Only school-appropriate subjects are allowed.</li>
+      <li>Respect your tutor’s time and effort.</li>
+      <li>Sessions are confidential and safe.</li>
+    </ul>
+  </section>
 
-    <div class="tutor-card">
-      <h3>Sam L.</h3>
-      <p><strong>Subjects:</strong> English, Essay Writing</p>
-      <p><strong>Grade:</strong> 12</p>
-      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-    </div>
-
-    <div class="tutor-card">
-      <h3>Maya K.</h3>
-      <p><strong>Subjects:</strong> Physics, Calculus</p>
-      <p><strong>Grade:</strong> 11</p>
-      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-    </div>
-
-    <div class="tutor-card">
-      <h3>Leo P.</h3>
-      <p><strong>Subjects:</strong> Spanish, History</p>
-      <p><strong>Grade:</strong> 10</p>
-      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-    </div>
-
-    <div class="tutor-card">
-      <h3>Sara T.</h3>
-      <p><strong>Subjects:</strong> Algebra II, Trigonometry</p>
-      <p><strong>Grade:</strong> 12</p>
-      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-    </div>
-
-    <div class="tutor-card">
-      <h3>Ravi S.</h3>
-      <p><strong>Subjects:</strong> Computer Science, Coding</p>
-      <p><strong>Grade:</strong> 11</p>
-      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-    </div>
-
-    <div class="tutor-card">
-      <h3>Nina F.</h3>
-      <p><strong>Subjects:</strong> English, Public Speaking</p>
-      <p><strong>Grade:</strong> 12</p>
-      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Tutorlyra • Student-run tutoring</p>
-</footer>
+  <footer>
+    <p>© 2025 Tutorlyra • Student-run tutoring</p>
+  </footer>
 
 </body>
 </html>
