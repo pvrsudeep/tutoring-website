@@ -2,122 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Tutors • Tutorlyra</title>
+  <title>Tutorlyra • Student Tutoring</title>
   <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f0f2f7;
+      line-height: 1.6;
+      background: #f5f6fa;
       color: #333;
     }
 
+    /* Header / Hero */
     header {
-      background: linear-gradient(90deg, #3b5cff, #2f49cc);
+      background: linear-gradient(135deg, #3b5cff, #2f49cc);
       color: white;
-      padding: 60px 20px;
+      padding: 100px 20px;
       text-align: center;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 3rem;
+      font-size: 3.5rem;
+      margin-bottom: 15px;
     }
 
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    header a.button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      background: #ffdd59;
+      color: #2f49cc;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    header a.button:hover {
+      background: #ffd32a;
+      transform: translateY(-3px);
+    }
+
+    /* Navigation */
     nav {
       background: #2f49cc;
       padding: 15px 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav a {
       color: white;
-      margin: 0 20px;
-      text-decoration: none;
+      margin: 0 25px;
       font-weight: bold;
-      transition: all 0.3s;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #ffdd59;
     }
 
+    /* Section titles */
     section {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
-    h2 {
+    section h2 {
       text-align: center;
       color: #2f49cc;
+      font-size: 2.2rem;
       margin-bottom: 50px;
-      font-size: 2rem;
+      position: relative;
     }
 
-    .tutors-grid {
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #3b5cff;
+      margin: 15px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Card container */
+    .card-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
     }
 
-    .tutor-card {
+    .card {
       background: white;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .tutor-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     }
 
-    .tutor-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
+    .card h3 {
       margin-bottom: 15px;
-      object-fit: cover;
-    }
-
-    .tutor-card h3 {
-      margin: 10px 0;
       color: #3b5cff;
     }
 
-    .tutor-card p {
-      margin: 5px 0;
+    .card p, .card ul, .card ol {
+      margin-top: 10px;
+      font-size: 1rem;
     }
 
-    .tutor-card a {
+    .card ul, .card ol {
+      padding-left: 20px;
+    }
+
+    .card a.button {
+      margin-top: 20px;
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
+      padding: 12px 25px;
       background: #3b5cff;
       color: white;
-      text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: bold;
-      transition: background 0.3s;
+      text-decoration: none;
+      transition: all 0.3s;
     }
 
-    .tutor-card a:hover {
+    .card a.button:hover {
       background: #2f49cc;
+      transform: translateY(-3px);
     }
 
+    /* Footer */
     footer {
       background: #222;
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
       margin-top: 60px;
     }
 
+    /* Responsive adjustments */
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1rem;
       }
 
       nav a {
@@ -130,142 +181,95 @@
 <body>
 
   <header>
-    <h1>Our Tutors</h1>
-    <p>Student-run tutoring • Online • School-focused</p>
+    <h1>Tutorlyra</h1>
+    <p>Student-run tutoring • Online • Peer Learning Made Easy</p>
+    <a href="tutors.html" class="button">Find Your Tutor</a>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="tutors.html">Tutors</a>
-    <a href="index.html#rules">Rules</a>
+    <a href="#about">About</a>
+    <a href="#process">How It Works</a>
+    <a href="#rules">Rules</a>
   </nav>
 
-  <section>
-    <h2>Meet Our Tutors</h2>
-
-    <div class="tutors-grid">
-
-      <!-- Example Tutor -->
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Alex M.">
-        <h3>Alex M.</h3>
-        <p><strong>Subjects:</strong> Algebra I, Geometry</p>
-        <p><strong>Grade:</strong> 10</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Tutorlyra</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>
+          Tutorlyra was created by students for students. We provide a safe,
+          online platform where peers can support each other academically,
+          making learning flexible and engaging.
+        </p>
       </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Jamie R.">
-        <h3>Jamie R.</h3>
-        <p><strong>Subjects:</strong> Biology, Chemistry</p>
-        <p><strong>Grade:</strong> 11</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+      <div class="card">
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>Flexible scheduling to fit your school life</li>
+          <li>Verified student tutors from our school</li>
+          <li>Online sessions for convenience and safety</li>
+          <li>Focus on school subjects and academic growth</li>
+          <li>Friendly, supportive environment</li>
+        </ul>
       </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Sam L.">
-        <h3>Sam L.</h3>
-        <p><strong>Subjects:</strong> English, Essay Writing</p>
-        <p><strong>Grade:</strong> 12</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+      <div class="card">
+        <h3>Subjects We Cover</h3>
+        <ul>
+          <li>Math: Algebra, Geometry, Trigonometry, Calculus</li>
+          <li>Science: Biology, Chemistry, Physics</li>
+          <li>English: Writing, Literature, Public Speaking</li>
+          <li>Social Studies: History, Civics</li>
+          <li>Computer Science & Coding</li>
+        </ul>
       </div>
+    </div>
+  </section>
 
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Maya K.">
-        <h3>Maya K.</h3>
-        <p><strong>Subjects:</strong> Physics, Calculus</p>
-        <p><strong>Grade:</strong> 11</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+  <!-- How It Works -->
+  <section id="process">
+    <h2>How It Works</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Step 1: Browse Tutors</h3>
+        <p>Check out our tutors, their subjects, and availability.</p>
       </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Leo P.">
-        <h3>Leo P.</h3>
-        <p><strong>Subjects:</strong> Spanish, History</p>
-        <p><strong>Grade:</strong> 10</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+      <div class="card">
+        <h3>Step 2: Book a Session</h3>
+        <p>Book at least 24 hours in advance to secure your spot.</p>
       </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Sara T.">
-        <h3>Sara T.</h3>
-        <p><strong>Subjects:</strong> Algebra II, Trigonometry</p>
-        <p><strong>Grade:</strong> 12</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+      <div class="card">
+        <h3>Step 3: Attend Online</h3>
+        <p>Receive your Zoom or Google Meet link and join the session online.</p>
       </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Ravi S.">
-        <h3>Ravi S.</h3>
-        <p><strong>Subjects:</strong> Computer Science, Coding</p>
-        <p><strong>Grade:</strong> 11</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+      <div class="card">
+        <h3>Step 4: Give Feedback</h3>
+        <p>Provide feedback to help improve the tutoring experience.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Nina F.">
-        <h3>Nina F.</h3>
-        <p><strong>Subjects:</strong> English, Public Speaking</p>
-        <p><strong>Grade:</strong> 12</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+  <!-- Rules Section -->
+  <section id="rules">
+    <h2>Rules & Safety</h2>
+    <div class="card-container">
+      <div class="card">
+        <ul>
+          <li>All sessions are online only.</li>
+          <li>Bookings must be made at least 24 hours in advance.</li>
+          <li>No last names or personal contact info shared.</li>
+          <li>Only school-appropriate subjects allowed.</li>
+          <li>Respect your tutor’s time and effort.</li>
+          <li>Sessions are confidential and safe.</li>
+        </ul>
       </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Omar L.">
-        <h3>Omar L.</h3>
-        <p><strong>Subjects:</strong> Chemistry, Physics</p>
-        <p><strong>Grade:</strong> 11</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+      <div class="card">
+        <p>
+          We prioritize safety and learning. Tutors are verified students from
+          our school, and all sessions follow school-appropriate standards.
+        </p>
       </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Emily B.">
-        <h3>Emily B.</h3>
-        <p><strong>Subjects:</strong> Algebra I, Algebra II</p>
-        <p><strong>Grade:</strong> 10</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-      </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Jacob H.">
-        <h3>Jacob H.</h3>
-        <p><strong>Subjects:</strong> World History, US History</p>
-        <p><strong>Grade:</strong> 12</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-      </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Leah C.">
-        <h3>Leah C.</h3>
-        <p><strong>Subjects:</strong> Spanish, French</p>
-        <p><strong>Grade:</strong> 11</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-      </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Ethan W.">
-        <h3>Ethan W.</h3>
-        <p><strong>Subjects:</strong> Trigonometry, Calculus</p>
-        <p><strong>Grade:</strong> 12</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-      </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Hana Y.">
-        <h3>Hana Y.</h3>
-        <p><strong>Subjects:</strong> Biology, Psychology</p>
-        <p><strong>Grade:</strong> 11</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-      </div>
-
-      <div class="tutor-card">
-        <img src="https://via.placeholder.com/100" alt="Max D.">
-        <h3>Max D.</h3>
-        <p><strong>Subjects:</strong> English Literature, Essay Writing</p>
-        <p><strong>Grade:</strong> 12</p>
-        <a href="https://calendar.google.com/" target="_blank">Book Session</a>
-      </div>
-
     </div>
   </section>
 
