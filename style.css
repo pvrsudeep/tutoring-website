@@ -1,0 +1,182 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f6fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header / Hero */
+header {
+  background: linear-gradient(135deg, #3b5cff, #2f49cc);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+header a.button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background: #ffdd59;
+  color: #2f49cc;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+header a.button:hover {
+  background: #ffd32a;
+  transform: translateY(-3px);
+}
+
+/* Navigation */
+nav {
+  background: #2f49cc;
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  margin: 0 25px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffdd59;
+}
+
+/* Section Titles */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+section h2 {
+  text-align: center;
+  color: #2f49cc;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3b5cff;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Cards */
+.card-container, .tutors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.card, .tutor-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover, .tutor-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card h3, .tutor-card h3 {
+  margin-bottom: 15px;
+  color: #3b5cff;
+}
+
+.card p, .card ul, .card ol, .tutor-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.card ul, .card ol {
+  padding-left: 20px;
+}
+
+.card a.button, .tutor-card a {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #3b5cff;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.card a.button:hover, .tutor-card a:hover {
+  background: #2f49cc;
+  transform: translateY(-3px);
+}
+
+/* Tutor card image */
+.tutor-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
