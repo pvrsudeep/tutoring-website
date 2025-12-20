@@ -2,158 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutorlyra</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    /* ---------- Global Styles ---------- */
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f0f4f8;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
-    }
-
-    /* ---------- Header ---------- */
-    header {
-      background: linear-gradient(90deg, #3b5cff, #5ac8fa);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-    }
-
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2rem;
-    }
-
-    /* ---------- Navigation ---------- */
-    nav {
-      background: #2f49cc;
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 20px;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    /* ---------- Sections ---------- */
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #2f49cc;
-    }
-
-    /* ---------- Tutors Grid ---------- */
-    .tutors {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .tutor-card {
-      background: white;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .tutor-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-    }
-
-    .tutor-card h3 {
-      margin-top: 0;
-      color: #3b5cff;
-    }
-
-    .tutor-card a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 20px;
-      background: #3b5cff;
-      color: white;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .tutor-card a:hover {
-      background: #2f49cc;
-      transform: translateY(-2px);
-    }
-
-    /* ---------- Rules List ---------- */
-    ul {
-      list-style: disc inside;
-      line-height: 1.8;
-      font-size: 1.1rem;
-    }
-
-    /* ---------- Footer ---------- */
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
-    }
-
-    /* ---------- Responsive ---------- */
-    @media (max-width: 600px){
-      header h1 {
-        font-size: 2rem;
-      }
-      nav a {
-        margin: 0 10px;
-      }
-    }
-  </style>
+  <title>Our Tutors • Tutorlyra</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
@@ -162,21 +13,14 @@
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#tutors">Tutors</a>
-  <a href="#rules">Rules</a>
+  <a href="index.html">Home</a>
+  <a href="tutors.html">Tutors</a>
+  <a href="index.html#rules">Rules</a>
 </nav>
 
-<section id="home" class="section">
-  <h2>Welcome</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    Tutorlyra connects students at our school with peer tutors. Sessions are online only and must be booked at least 
-    <strong>24 hours in advance</strong>.
-  </p>
-</section>
+<section>
+  <h2>Meet Our Tutors</h2>
 
-<section id="tutors" class="section">
-  <h2>Our Tutors</h2>
   <div class="tutors">
 
     <div class="tutor-card">
@@ -200,37 +44,47 @@
       <a href="https://calendar.google.com/" target="_blank">Book Session</a>
     </div>
 
-  </div>
-</section>
+    <div class="tutor-card">
+      <h3>Maya K.</h3>
+      <p><strong>Subjects:</strong> Physics, Calculus</p>
+      <p><strong>Grade:</strong> 11</p>
+      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+    </div>
 
-<section id="rules" class="section">
-  <h2>Rules & Safety</h2>
-  <ul>
-    <li>All sessions are online only</li>
-    <li>Bookings must be made 24+ hours in advance</li>
-    <li>No last names or personal contact info listed</li>
-    <li>Zoom or Google Meet links are sent after booking</li>
-    <li>School-appropriate subjects only</li>
-  </ul>
+    <div class="tutor-card">
+      <h3>Leo P.</h3>
+      <p><strong>Subjects:</strong> Spanish, History</p>
+      <p><strong>Grade:</strong> 10</p>
+      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+    </div>
+
+    <div class="tutor-card">
+      <h3>Sara T.</h3>
+      <p><strong>Subjects:</strong> Algebra II, Trigonometry</p>
+      <p><strong>Grade:</strong> 12</p>
+      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+    </div>
+
+    <div class="tutor-card">
+      <h3>Ravi S.</h3>
+      <p><strong>Subjects:</strong> Computer Science, Coding</p>
+      <p><strong>Grade:</strong> 11</p>
+      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+    </div>
+
+    <div class="tutor-card">
+      <h3>Nina F.</h3>
+      <p><strong>Subjects:</strong> English, Public Speaking</p>
+      <p><strong>Grade:</strong> 12</p>
+      <a href="https://calendar.google.com/" target="_blank">Book Session</a>
+    </div>
+
+  </div>
 </section>
 
 <footer>
   <p>© 2025 Tutorlyra • Student-run tutoring</p>
 </footer>
-
-<script>
-  // Scroll-trigger fade-in animation
-  const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  sections.forEach(section => observer.observe(section));
-</script>
 
 </body>
 </html>
